@@ -47,10 +47,10 @@ def create_user():
         ##interaction db
         try:
             ##Called function
-            db.session.execute("""SELECT create_user('%s', '%s', '%s', '%s', '%s');""" % (ime, priimek, email, geslo_h, tel))
+            r=db.session.execute("""SELECT create_user('%s', '%s', '%s', '%s', '%s');""" % (ime, priimek, email, geslo_h, tel)).scalar()
             db.session.commit()
             ##Returned data to program
-            return jsonify({'bool': True}), 201
+            return jsonify({'bool': r}), 201
         except Exception as e:
             print(e)
             return jsonify({'bool': False}), 404
