@@ -203,7 +203,7 @@ def vplacniki():
             r = r.replace("'", "")
             r = r.split(",")
             for i in range(0, len(r)):
-                r1 = {"id": int(r[i][0]), "ime": "%s" % (r[i][1]), "priimek": "%s" % (r[i][2]), "email": "%s" % (r[i][3]), "tel": "%s"%(r[i][5])}
+                r1 = {"id": r[i][0], "ime": "%s" % (r[i][1]), "priimek": "%s" % (r[i][2]), "email": "%s" % (r[i][3]), "tel": "%s"%(r[i][5])}
                 data.append(r1)
             return data, 200
 
