@@ -546,7 +546,7 @@ def cizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT oprema_create(%s, %s, %s, %s, '%s', '%s', '%s');""" % (user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
+            r = db.session.execute("""SELECT izposoje_create(%s, %s, %s, %s, '%s', '%s', '%s');""" % (user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -590,6 +590,197 @@ def cporocila():
             return jsonify({"bool": False}), 404
     else:
         return jsonify({"u sent": "nothing"})
+
+
+
+##KATEGORIJE DELETE
+@app.route("/dkategorije", methods=['GET', 'POST'])
+def dkategorije():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM kategorije WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+##STANJA DELETE
+@app.route("/dstanja", methods=['GET', 'POST'])
+def dstanja():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM stanja WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+##OPREMA DELETE
+@app.route("/doprema", methods=['GET', 'POST'])
+def doprema():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM oprema WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+##IZPOSOJE DELETE
+@app.route("/dizposoje", methods=['GET', 'POST'])
+def dizposoje():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM izposoje WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+##POROČILA DELETE
+@app.route("/dporocila", methods=['GET', 'POST'])
+def dporocila():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM porocila WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+
+##PLACNIKI DELETE
+@app.route("/dplacniki", methods=['GET', 'POST'])
+def dplacniki():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM placniki WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
+
+
+##USER DELETE
+@app.route("/duser", methods=['GET', 'POST'])
+def duser():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""DELETE FROM users WHERE id=%s;""" % (id)).first()
+            db.session.commit()
+            return r, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
 
 
 # ##PLAYLISTS
