@@ -207,7 +207,7 @@ def vplacniki():
                 r1 = {"id": int(r[i][0]), "ime": "%s" % (r[i][1]), "priimek": "%s" % (r[i][2]), "email": "%s" % (r[i][3]), "tel": "%s"%(r[i][5])}
                 data.append(r1)
             print(data)
-            return data, 200
+            return jsonify(data), 200
 
         except Exception as e:
             print(e)
