@@ -25,6 +25,7 @@ def index():
     else:
         return jsonify({'u sent': "nothing"})
 
+    
 
 ##REGISTER_USER
 @app.route("/create_user", methods=['GET', 'POST'])
@@ -782,4 +783,4 @@ def duser():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
