@@ -45,3 +45,10 @@ IF((SELECT COUNT(*) FROM users u WHERE u.email = gmail AND u.geslo = pass) = 0)
 END;
 $$
 LANGUAGE 'plpgsql';
+
+CREATE OR REPLACE VIEW izposoje_view AS
+SELECT i.id, GROUP_CONCAT(u.ime, ' ', u.priimek), o.ime, GROUP_CONCAT(p.ime, ' ', p.priimek), i.datum_od, i.datum_do, i.opis FROM users u 
+INNER JOIN izposoje i ON u.id=i.user_id
+INNER JOIN oprema o ON o.id=i.oprema_id
+INNER JOIN placniki p ON p.id=i.placnik_id
+INNER JOIN stanja s ON s.id=i.stanje_id
