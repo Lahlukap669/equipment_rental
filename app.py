@@ -198,14 +198,14 @@ def vplacniki():
             ##Called function
             r = db.session.execute("""SELECT * FROM placniki;""").fetchall()
             db.session.commit()
-            #r = str(r)[1:-1]
-            #r = r.replace(" ", "")
-            #r = r.replace("'", "")
-            #r = r.split(",")
+            r = str(r)[1:-1]
+            r = r.replace(" ", "")
+            r = r.replace("'", "")
+            r = r.split(",")
             for i in range(0, len(r)):
                 r1 = {"id": r[i][0], "ime": "%s" % (r[i][1]), "priimek": "%s" % (r[i][2]), "email": "%s" % (r[i][3]), "tel": "%s"%(r[i][5])}
                 data.append(r1)
-            return data, 200
+            return r, 200
 
         except Exception as e:
             print(e)
