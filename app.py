@@ -344,7 +344,7 @@ def vstanja():
         data = r2.get("stanja")
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM stanja;""").first()
+            r = db.session.execute("""SELECT * FROM stanja;""").fetchall()
             db.session.commit()
             #r = str(r)[1:-1]
             #r = r.replace(" ", "")
