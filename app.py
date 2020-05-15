@@ -455,6 +455,35 @@ def iizposoje():
         return jsonify({'u sent': "nothing"})
 
 
+@app.route("/ioprema", methods=['GET', 'POST'])
+def ioprema():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 3,
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""SELECT * FROM izposoje WHERE id=%s LIMIT 1;""" % (id)).first()
+            db.session.commit()
+            r = str(r)[1:-1]
+            r = r.replace(" ", "")
+            r = r.replace("'", "")
+            r = r.split(",")
+            r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[3]), "opis": "%s" % (r[4])}
+            return r1, 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
 
 ##IZPOSOJE VSE
 @app.route("/vizposoje", methods=['GET', 'POST'])
