@@ -761,7 +761,7 @@ def dkategorije():
     if (request.method == 'POST'):
         ##example of input data:
         ##        {
-        ##          "id": 3,
+        ##          "id": 3
         ##        }
         podatki_json = request.get_json()
         ##Deviding sent data
@@ -770,8 +770,9 @@ def dkategorije():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM kategorije WHERE id=%s;""" % (id)).scalar()
+            db.session.execute("""DELETE FROM kategorije k WHERE k.id=%d;""" % (id))
             db.session.commit()
+            print("true")
             return jsonify({"bool": True}), 200
 
         except Exception as e:
@@ -797,7 +798,7 @@ def dstanja():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM stanja WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM stanja WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
@@ -824,7 +825,7 @@ def doprema():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM oprema WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM oprema WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
@@ -851,7 +852,7 @@ def dizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM izposoje WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM izposoje WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
@@ -878,7 +879,7 @@ def dporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM porocila WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM porocila WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
@@ -906,7 +907,7 @@ def dplacniki():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM placniki WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM placniki WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
@@ -934,7 +935,7 @@ def duser():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM users WHERE id=%s;""" % (id)).first()
+            db.session.execute("""DELETE FROM users WHERE id=%s;""" % (id))
             db.session.commit()
             return jsonify({"bool": True}), 200
 
