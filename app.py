@@ -375,7 +375,7 @@ def voprema():
             #r = r.replace("'", "")
             #r = r.split(",")
             for i in range(0, len(r)):
-                r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[3]), "opis": "%s" % (r[4])}
+                r1 = {"id": int(r[i][0]), "kategorija_id":  int(r[i][1]), "stanje_id": int(r[i][2]), "ime": "%s" % (r[i][3]), "opis": "%s" % (r[i][4])}
                 data.append(r1)
             return jsonify(data), 200
 
