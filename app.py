@@ -772,7 +772,7 @@ def dkategorije():
             ##Called function
             r = db.session.execute("""DELETE FROM kategorije WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -799,7 +799,7 @@ def dstanja():
             ##Called function
             r = db.session.execute("""DELETE FROM stanja WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -826,7 +826,7 @@ def doprema():
             ##Called function
             r = db.session.execute("""DELETE FROM oprema WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -853,7 +853,7 @@ def dizposoje():
             ##Called function
             r = db.session.execute("""DELETE FROM izposoje WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -880,7 +880,7 @@ def dporocila():
             ##Called function
             r = db.session.execute("""DELETE FROM porocila WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -908,7 +908,7 @@ def dplacniki():
             ##Called function
             r = db.session.execute("""DELETE FROM placniki WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
@@ -936,7 +936,7 @@ def duser():
             ##Called function
             r = db.session.execute("""DELETE FROM users WHERE id=%s;""" % (id)).first()
             db.session.commit()
-            return r, 200
+            return jsonify({"bool": True}), 200
 
         except Exception as e:
             print(e)
