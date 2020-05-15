@@ -362,6 +362,33 @@ def vstanja():
         return jsonify({'u sent': "nothing"})
 
 
+##OPREMA VSE
+@app.route("/voprema", methods=['GET', 'POST'])
+def voprema():
+    if (request.method == 'POST'):
+        ##interaction db
+        r2 = {"stanja":[]}
+        data = r2.get("stanja")
+        try:
+            ##Called function
+            r = db.session.execute("""SELECT * FROM stanja;""").fetchall()
+            db.session.commit()
+            #r = str(r)[1:-1]
+            #r = r.replace(" ", "")
+            #r = r.replace("'", "")
+            #r = r.split(",")
+            for i in range(0, len(r)):
+                r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[3]), "opis": "%s" % (r[4])}
+                data.append(r1)
+            return jsonify(data), 200
+
+        except Exception as e:
+            print(e)
+            return jsonify({'bool': False}), 404
+    else:
+        return jsonify({'u sent': "nothing"})
+
+
 ##STANJA INFO
 @app.route("/istanja", methods=['GET', 'POST'])
 def istanja():
@@ -454,7 +481,7 @@ def iizposoje():
     else:
         return jsonify({'u sent': "nothing"})
 
-
+##INFO OPREMA
 @app.route("/ioprema", methods=['GET', 'POST'])
 def ioprema():
     if (request.method == 'POST'):
