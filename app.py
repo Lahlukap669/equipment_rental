@@ -723,7 +723,7 @@ def cporocila():
     else:
         return jsonify({"u sent": "nothing"})
 
-##POROCILA CREATE
+##POROCILA UPDATE
 @app.route("/uporocila", methods=['GET', 'POST'])
 def uporocila():
     if (request.method == 'POST'):
