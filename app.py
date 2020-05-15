@@ -115,7 +115,7 @@ def login():
 
         except Exception as e:
             print(e)
-            return jsonify({"bool": False}), 404
+            return jsonify({"bool": 0}), 404
     else:
         return jsonify({"u sent": "nothing"})
 
