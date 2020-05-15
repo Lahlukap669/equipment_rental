@@ -364,11 +364,11 @@ def vstanja():
 def voprema():
     if (request.method == 'POST'):
         ##interaction db
-        r2 = {"stanja":[]}
-        data = r2.get("stanja")
+        r2 = {"oprema":[]}
+        data = r2.get("oprema")
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM stanja;""").fetchall()
+            r = db.session.execute("""SELECT * FROM oprema;""").fetchall()
             db.session.commit()
             #r = str(r)[1:-1]
             #r = r.replace(" ", "")
@@ -558,7 +558,7 @@ def coprema():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT oprema_create(%s, %s, '%s', '%s');""" % (kategorija_id, stanje_id, ime, opis)).scalar()
+            r = db.session.execute("""SELECT oprema_create(%d, %d, '%s', '%s');""" % (kategorija_id, stanje_id, ime, opis)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -636,7 +636,7 @@ def cizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT izposoje_create(%s, %s, %s, %s, '%s', '%s', '%s');""" % (user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
+            r = db.session.execute("""SELECT izposoje_create(%d, %d, %d, %d, '%s', '%s', '%s');""" % (user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -679,7 +679,7 @@ def uizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT izposoje_update(%s, %s, %s, %s, %s, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
+            r = db.session.execute("""SELECT izposoje_update(%d, %d, %d, %d, %d, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -710,7 +710,7 @@ def cporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT porocilo_create(%s, '%s');""" % (izposoja_id, porocilo)).scalar()
+            r = db.session.execute("""SELECT porocilo_create(%d, '%s');""" % (izposoja_id, porocilo)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -742,7 +742,7 @@ def uporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT porocilo_update(%s, %s, '%s');""" % (id, izposoja_id, porocilo)).scalar()
+            r = db.session.execute("""SELECT porocilo_update(%d, %d, '%s');""" % (id, izposoja_id, porocilo)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
