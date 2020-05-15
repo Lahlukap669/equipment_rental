@@ -493,7 +493,7 @@ def ioprema():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM izposoje WHERE id=%d LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT * FROM oprema WHERE id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
