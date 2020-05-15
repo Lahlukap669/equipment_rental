@@ -652,7 +652,7 @@ def cizposoje():
 
 ##IZPOSOJE UPDATE
 @app.route("/uizposoje", methods=['GET', 'POST'])
-def cizposoje():
+def uizposoje():
     if (request.method == 'POST'):
         ##example of input data:
         ##        {
