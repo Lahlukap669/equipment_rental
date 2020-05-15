@@ -572,6 +572,42 @@ def coprema():
         return jsonify({"u sent": "nothing"})
 
 
+##OPREMA UPDATE
+@app.route("/uoprema", methods=['GET', 'POST'])
+def uoprema():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 1,
+        ##          "kategorija_id": 1,
+        ##          "stanje_id": 2,
+        ##          "ime": "lopata",
+        ##          "opis": "za grabljenje listja"
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+        kategorija_id = podatki_json["kategorija_id"]
+        stanje_id = podatki_json["stanje_id"]
+        ime = podatki_json["ime"]
+        opis = podatki_json["opis"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""SELECT oprema_update(%s, %s, %s, '%s', '%s');""" % (id, kategorija_id, stanje_id, ime, opis)).scalar()
+            db.session.commit()
+            if (r == True):
+                return jsonify({"bool": True}), 201
+            ##Returned data to program
+            else:
+                return jsonify({"bool": False})
+        except Exception as e:
+            print(e)
+            return jsonify({"bool": False}), 404
+    else:
+        return jsonify({"u sent": "nothing"})
+
 
 ##IZPOSOJE CREATE
 @app.route("/cizposoje", methods=['GET', 'POST'])
@@ -614,6 +650,48 @@ def cizposoje():
         return jsonify({"u sent": "nothing"})
 
 
+##IZPOSOJE UPDATE
+@app.route("/uizposoje", methods=['GET', 'POST'])
+def cizposoje():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 1,
+        ##          "user_id": 1,
+        ##          "oprema_id": 2,
+        ##          "placnik_id": 2,
+        ##          "stanje_id": 2,
+        ##          "datum_od": "2020-03-20",
+        ##          "datum_do": "2020-03-25",
+        ##          "opis": "izposojeno kot ponavadi preko kombija"
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+        user_id = podatki_json["user_id"]
+        oprema_id = podatki_json["oprema_id"]
+        placnik_id = podatki_json["placnik_id"]
+        stanje_id = podatki_json["stanje_id"]
+        datum_od = podatki_json["datum_od"]
+        datum_do = podatki_json["datum_do"]
+        opis = podatki_json["opis"]
+
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""SELECT izposoje_create(%s, %s, %s, %s, %s, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
+            db.session.commit()
+            if (r == True):
+                return jsonify({"bool": True}), 201
+            ##Returned data to program
+            else:
+                return jsonify({"bool": False})
+        except Exception as e:
+            print(e)
+            return jsonify({"bool": False}), 404
+    else:
+        return jsonify({"u sent": "nothing"})
+
 
 ##POROCILA CREATE
 @app.route("/cporocila", methods=['GET', 'POST'])
@@ -632,7 +710,7 @@ def cporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT oprema_create(%s, '%s');""" % (izposoja_id, porocilo)).scalar()
+            r = db.session.execute("""SELECT porocilo_create(%s, '%s');""" % (izposoja_id, porocilo)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -645,7 +723,37 @@ def cporocila():
     else:
         return jsonify({"u sent": "nothing"})
 
+##POROCILA CREATE
+@app.route("/uporocila", methods=['GET', 'POST'])
+def uporocila():
+    if (request.method == 'POST'):
+        ##example of input data:
+        ##        {
+        ##          "id": 1,
+        ##          "izposoja_id": 1,
+        ##          "porocilo": "Opremo si je izposodil v sredo in jo vrnil v petek. Pri tem oprema ni bila poškodovana..."
+        ##        }
+        podatki_json = request.get_json()
+        ##Deviding sent data
+        id = podatki_json["id"]
+        izposoja_id = podatki_json["izposoja_id"]
+        porocilo = podatki_json["porocilo"]
 
+        ##interaction db
+        try:
+            ##Called function
+            r = db.session.execute("""SELECT porocilo_create(%s, %s, '%s');""" % (id, izposoja_id, porocilo)).scalar()
+            db.session.commit()
+            if (r == True):
+                return jsonify({"bool": True}), 201
+            ##Returned data to program
+            else:
+                return jsonify({"bool": False})
+        except Exception as e:
+            print(e)
+            return jsonify({"bool": False}), 404
+    else:
+        return jsonify({"u sent": "nothing"})
 
 ##KATEGORIJE DELETE
 @app.route("/dkategorije", methods=['GET', 'POST'])
