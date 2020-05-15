@@ -284,7 +284,7 @@ def ikategorije():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM kategorije WHERE id=%s LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT * FROM kategorije WHERE id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
@@ -401,7 +401,7 @@ def istanja():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM stanja WHERE id=%s LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT * FROM stanja WHERE id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
@@ -433,7 +433,7 @@ def iporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM porocila WHERE izposoja_id=%s LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT * FROM porocila WHERE izposoja_id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
@@ -463,7 +463,7 @@ def iizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM izposoje WHERE id=%s LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT * FROM izposoje WHERE id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
