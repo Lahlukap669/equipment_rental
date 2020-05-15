@@ -679,7 +679,7 @@ def cizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT izposoje_create(%s, %s, %s, %s, %s, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
+            r = db.session.execute("""SELECT izposoje_update(%s, %s, %s, %s, %s, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
@@ -742,7 +742,7 @@ def uporocila():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT porocilo_create(%s, %s, '%s');""" % (id, izposoja_id, porocilo)).scalar()
+            r = db.session.execute("""SELECT porocilo_update(%s, %s, '%s');""" % (id, izposoja_id, porocilo)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
