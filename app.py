@@ -175,7 +175,7 @@ def userinfo():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "ime": "%s" % (r[1]), "priimek": "%s" % (r[2]), "email": "%s" % (r[3]), "tel": "%s"%(r[5])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
@@ -291,7 +291,7 @@ def ikategorije():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "kategorija": "%s" % (r[1]), "opis": "%s" % (r[2])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
@@ -408,7 +408,7 @@ def istanja():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "stanje": "%s" % (r[1]), "opis": "%s" % (r[2])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
@@ -440,7 +440,7 @@ def iporocila():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "stanje": "%s" % (r[1]), "opis": "%s" % (r[2])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
@@ -470,7 +470,7 @@ def iizposoje():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "stanje": "%s" % (r[1]), "opis": "%s" % (r[2])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
@@ -500,7 +500,7 @@ def ioprema():
             r = r.replace("'", "")
             r = r.split(",")
             r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[3]), "opis": "%s" % (r[4])}
-            return r1, 200
+            return jsonify(r1), 200
 
         except Exception as e:
             print(e)
