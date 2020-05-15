@@ -770,7 +770,7 @@ def dkategorije():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""DELETE FROM kategorije WHERE id=%s;""" % (id)).first()
+            r = db.session.execute("""DELETE FROM kategorije WHERE id=%s;""" % (id)).scalar()
             db.session.commit()
             return jsonify({"bool": True}), 200
 
