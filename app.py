@@ -111,11 +111,8 @@ def login():
             ##Called function
             r = db.session.execute("""SELECT login('%s', '%s');""" % (email, geslo_h)).scalar()
             db.session.commit()
-            if (r == True):
-                return jsonify({"bool": True}), 201
-            ##Returned data to program
-            else:
-                return jsonify({"bool": False})
+            return jsonify({"bool": r}), 201
+
         except Exception as e:
             print(e)
             return jsonify({"bool": False}), 404
