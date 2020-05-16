@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{23090F7C-26A2-4A9A-9CD3-B81CB8DBEC9C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Equipment_rental</RootNamespace>
+    <AssemblyName>Equipment rental</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DodajKategorijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DodajKategorijo.Designer.cs">
+      <DependentUpon>DodajKategorijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzbrisiKategorijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzbrisiKategorijo.Designer.cs">
+      <DependentUpon>IzbrisiKategorijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzbrisiOpremo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzbrisiOpremo.Designer.cs">
+      <DependentUpon>IzbrisiOpremo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IzbrisiStanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IzbrisiStanje.Designer.cs">
+      <DependentUpon>IzbrisiStanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kategorije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kategorije.Designer.cs">
+      <DependentUpon>Kategorije.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Oprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Oprema.Designer.cs">
+      <DependentUpon>Oprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosodobiOpremo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosodobiOpremo.Designer.cs">
+      <DependentUpon>PosodobiOpremo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PrikaziKategorijo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PrikaziKategorijo.Designer.cs">
+      <DependentUpon>PrikaziKategorijo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Stanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Stanja.Designer.cs">
+      <DependentUpon>Stanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UstvariOpremo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UstvariOpremo.Designer.cs">
+      <DependentUpon>UstvariOpremo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UstvariStanje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UstvariStanje.Designer.cs">
+      <DependentUpon>UstvariStanje.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VsaOprema.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VsaOprema.Designer.cs">
+      <DependentUpon>VsaOprema.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VsaStanja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VsaStanja.Designer.cs">
+      <DependentUpon>VsaStanja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VseKategorije.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VseKategorije.Designer.cs">
+      <DependentUpon>VseKategorije.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DodajKategorijo.resx">
+      <DependentUpon>DodajKategorijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzbrisiKategorijo.resx">
+      <DependentUpon>IzbrisiKategorijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzbrisiOpremo.resx">
+      <DependentUpon>IzbrisiOpremo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IzbrisiStanje.resx">
+      <DependentUpon>IzbrisiStanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kategorije.resx">
+      <DependentUpon>Kategorije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Oprema.resx">
+      <DependentUpon>Oprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosodobiOpremo.resx">
+      <DependentUpon>PosodobiOpremo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PrikaziKategorijo.resx">
+      <DependentUpon>PrikaziKategorijo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Stanja.resx">
+      <DependentUpon>Stanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UstvariOpremo.resx">
+      <DependentUpon>UstvariOpremo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UstvariStanje.resx">
+      <DependentUpon>UstvariStanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VsaOprema.resx">
+      <DependentUpon>VsaOprema.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VsaStanja.resx">
+      <DependentUpon>VsaStanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VseKategorije.resx">
+      <DependentUpon>VseKategorije.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
