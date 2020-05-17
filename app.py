@@ -514,7 +514,7 @@ def ioprema():
 def vizposoje():
     if (request.method == 'POST'):
         r2 = {"izposoje":[]}
-        data = r2.get("isposoje")
+        data = r2.get("izposoje")
         ##interaction db
         try:
             ##Called function
