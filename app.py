@@ -499,7 +499,7 @@ def ioprema():
             r = r.replace(" ", "")
             r = r.replace("'", "")
             r = r.split(",")
-            r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[3]), "opis": "%s" % (r[4])}
+            r1 = {"id": int(r[0]), "kategorija_id":  int(r[1]), "stanje_id": int(r[2]), "ime": "%s" % (r[4]), "opis": "%s" % (r[3])}
             return jsonify(r1), 200
 
         except Exception as e:
