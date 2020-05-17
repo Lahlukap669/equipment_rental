@@ -525,7 +525,7 @@ def vizposoje():
             #r = r.replace("'", "")
             #r = r.split(",")
             for i in range(0, len(r)):
-                r1 = {"id": int(r[i][0]), "nadzornik": "%s" % (r[i][1]), "oprema": "%s" % (r[i][2]), "placnik": "%s" % (r[i][3]), "datum_od": "%s" % (r[i][4]), "datum_do": "%s"%(r[i][5]), "opis": "%s"%(r[i][6])}
+                r1 = {"id": int(r[i][0]), "nadzornik": "%s" % (r[i][1]), "oprema": "%s" % (r[i][2]), "placnik": "%s" % (r[i][3]), "datum_od": "%s" % (str(r[i][4])), "datum_do": "%s"%(str(r[i][5])), "opis": "%s"%(r[i][6])}
                 data.append(r1)
             return jsonify(data), 200
 
