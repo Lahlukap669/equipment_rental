@@ -375,7 +375,7 @@ def voprema():
             #r = r.replace("'", "")
             #r = r.split(",")
             for i in range(0, len(r)):
-                r1 = {"id": int(r[i][0]), "kategorija_id":  int(r[i][1]), "stanje_id": int(r[i][2]), "ime": "%s" % (r[i][3]), "opis": "%s" % (r[i][4])}
+                r1 = {"id": int(r[i][0]), "kategorija_id":  int(r[i][1]), "stanje_id": int(r[i][2]), "ime": "%s" % (r[i][4]), "opis": "%s" % (r[i][3])}
                 data.append(r1)
             return jsonify(data), 200
 
@@ -595,7 +595,7 @@ def uoprema():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT oprema_update(%s, %s, %s, '%s', '%s');""" % (id, kategorija_id, stanje_id, ime, opis)).scalar()
+            r = db.session.execute("""SELECT oprema_update(%s, %s, %s, '%s', '%s');""" % (id, kategorija_id, stanje_id, opis, ime)).scalar()
             db.session.commit()
             if (r == True):
                 return jsonify({"bool": True}), 201
