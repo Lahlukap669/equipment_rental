@@ -14,6 +14,8 @@ namespace Equipment_rental
 {
     public partial class Form1 : MetroForm
     {
+        public static int uId;
+
         public Form1()
         {
             InitializeComponent();
@@ -51,6 +53,7 @@ namespace Equipment_rental
                 {
                     MessageBox.Show("Login successful.");
                     MainForm mainForm = new MainForm("lolz");
+                    uId = Convert.ToInt32(process["bool"]);
                     mainForm.Show();
                     this.Hide();
                 }

@@ -116,5 +116,33 @@ namespace Equipment_rental
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private async void MetroButton1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                HttpClient client = new HttpClient();
+
+                string test = "{ \"user_id\": " + Form1.uId + ", \"oprema_id\": " + savedOprema[metroComboBox1.SelectedItem.ToString()] + ", \"placnik_id\": " + savedPlacniki[metroComboBox2.SelectedItem.ToString()] + ", \"stanje_id\": " + savedStanje[metroComboBox3.SelectedItem.ToString()] + ", \"datum_od\" :\"" + dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm:ss") + "\", \"datum_do\" : \"" + dateTimePicker2.Value.ToString("yyyy-MM-dd HH:mm:ss") + "\", \"opis\" : \"" + metroTextBox1.Text +"\"}";
+                MessageBox.Show(test);
+
+                StringContent queryString = new StringContent(test, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync("https://equipment-rental.herokuapp.com/cizposoje", queryString);
+
+                response.EnsureSuccessStatusCode();
+
+                string responseString = response.Content.ReadAsStringAsync().Result;
+
+                dynamic process = Newtonsoft.Json.JsonConvert.DeserializeObject(responseString);
+
+                MessageBox.Show(process.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+            //Form1.uId;
+        }
     }
 }
