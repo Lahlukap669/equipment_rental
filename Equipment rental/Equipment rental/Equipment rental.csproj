@@ -89,6 +89,12 @@
     <Compile Include="IzbrisiStanje.Designer.cs">
       <DependentUpon>IzbrisiStanje.cs</DependentUpon>
     </Compile>
+    <Compile Include="Izposoje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Izposoje.Designer.cs">
+      <DependentUpon>Izposoje.cs</DependentUpon>
+    </Compile>
     <Compile Include="Kategorije.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,12 @@
     <Compile Include="Stanja.Designer.cs">
       <DependentUpon>Stanja.cs</DependentUpon>
     </Compile>
+    <Compile Include="UstvariIzposojo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UstvariIzposojo.Designer.cs">
+      <DependentUpon>UstvariIzposojo.cs</DependentUpon>
+    </Compile>
     <Compile Include="UstvariOpremo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +169,12 @@
     <Compile Include="VsaStanja.Designer.cs">
       <DependentUpon>VsaStanja.cs</DependentUpon>
     </Compile>
+    <Compile Include="VseIzposoje.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VseIzposoje.Designer.cs">
+      <DependentUpon>VseIzposoje.cs</DependentUpon>
+    </Compile>
     <Compile Include="VseKategorije.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +195,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="IzbrisiStanje.resx">
       <DependentUpon>IzbrisiStanje.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Izposoje.resx">
+      <DependentUpon>Izposoje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Kategorije.resx">
       <DependentUpon>Kategorije.cs</DependentUpon>
@@ -208,6 +229,9 @@
     <EmbeddedResource Include="Stanja.resx">
       <DependentUpon>Stanja.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UstvariIzposojo.resx">
+      <DependentUpon>UstvariIzposojo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UstvariOpremo.resx">
       <DependentUpon>UstvariOpremo.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,6 +243,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VsaStanja.resx">
       <DependentUpon>VsaStanja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VseIzposoje.resx">
+      <DependentUpon>VseIzposoje.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VseKategorije.resx">
       <DependentUpon>VseKategorije.cs</DependentUpon>

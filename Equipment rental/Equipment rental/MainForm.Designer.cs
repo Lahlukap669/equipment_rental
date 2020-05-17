@@ -94,6 +94,7 @@
             this.metroButton3.Size = new System.Drawing.Size(180, 23);
             this.metroButton3.TabIndex = 10;
             this.metroButton3.Text = "Izposoje";
+            this.metroButton3.Click += new System.EventHandler(this.MetroButton3_Click);
             // 
             // metroTile3
             // 
@@ -110,6 +111,7 @@
             this.metroButton5.Size = new System.Drawing.Size(180, 23);
             this.metroButton5.TabIndex = 12;
             this.metroButton5.Text = "Plačniki";
+            this.metroButton5.Click += new System.EventHandler(this.MetroButton5_Click);
             // 
             // metroTile4
             // 

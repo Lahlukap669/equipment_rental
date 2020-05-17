@@ -40,5 +40,16 @@ namespace Equipment_rental
             Oprema oprema = new Oprema();
             oprema.ShowDialog();
         }
+
+        private void MetroButton3_Click(object sender, EventArgs e)
+        {
+            Izposoje izposoje = new Izposoje();
+            izposoje.ShowDialog();
+        }
+
+        private void MetroButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,3 +29,37 @@ C:\Users\lovro\source\repos\Equipment rental\Equipment rental\obj\Debug\Equipmen
 C:\Users\lovro\source\repos\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariOpremo.resources
 C:\Users\lovro\source\repos\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VsaOprema.resources
 C:\Users\lovro\source\repos\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PosodobiOpremo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\Equipment rental.exe.config
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\Equipment rental.exe
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\Equipment rental.pdb
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\MetroFramework.dll
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\MetroFramework.Fonts.dll
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\Newtonsoft.Json.dll
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\bin\Debug\Newtonsoft.Json.xml
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.csprojAssemblyReference.cache
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.DodajKategorijo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Form1.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.IzbrisiKategorijo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.IzbrisiOpremo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.IzbrisiStanje.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Kategorije.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.MainForm.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Oprema.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PosodobiOpremo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PrikaziKategorijo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Properties.Resources.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Register.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Stanja.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariOpremo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariStanje.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VsaOprema.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VsaStanja.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VseKategorije.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.csproj.GenerateResource.cache
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.csproj.CoreCompileInputs.cache
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.csproj.CopyComplete
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.exe
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment rental.pdb
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Izposoje.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariIzposojo.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VseIzposoje.resources
