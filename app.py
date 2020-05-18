@@ -174,7 +174,7 @@ def userinfo():
             r = r.replace(" ", "")
             r = r.replace("'", "")
             r = r.split(",")
-            r1 = {"id": r[0], "ime": "%s" % (r[1]), "priimek": "%s" % (r[2]), "email": "%s" % (r[3]), "tel": "%s"%(r[5])}
+            r1 = {"id": int(r[0]), "ime": "%s" % (r[1]), "priimek": "%s" % (r[2]), "email": "%s" % (r[3]), "tel": "%s"%(r[5])}
             return jsonify(r1), 200
 
         except Exception as e:
@@ -683,11 +683,7 @@ def uizposoje():
             ##Called function
             r = db.session.execute("""SELECT izposoje_update(%d, %d, %d, %d, %d, '%s', '%s', '%s');""" % (id, user_id, oprema_id, placnik_id, stanje_id, datum_od, datum_do, opis)).scalar()
             db.session.commit()
-            if (r == True):
-                return jsonify({"bool": True}), 201
-            ##Returned data to program
-            else:
-                return jsonify({"bool": False})
+            return jsonify({"bool": r}), 201
         except Exception as e:
             print(e)
             return jsonify({"bool": False}), 404
