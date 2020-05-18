@@ -163,12 +163,12 @@ def userinfo():
         ##        }
         podatki_json = request.get_json()
         ##Deviding sent data
-        email = podatki_json["email"]
+        id = podatki_json["id"]
 
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM users WHERE id=%s LIMIT 1;""" % (email)).first()
+            r = db.session.execute("""SELECT * FROM users WHERE id=%s LIMIT 1;""" % (id)).first()
             db.session.commit()
             r = str(r)[1:-1]
             r = r.replace(" ", "")
