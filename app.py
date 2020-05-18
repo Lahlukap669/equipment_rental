@@ -174,7 +174,7 @@ def userinfo():
             r = r.replace(" ", "")
             r = r.replace("'", "")
             r = r.split(",")
-            r1 = {"id": int(r[0]), "ime": "%s" % (r[1]), "priimek": "%s" % (r[2]), "email": "%s" % (r[3]), "tel": "%s"%(r[5])}
+            r1 = {"id": r[0], "ime": "%s" % (r[1]), "priimek": "%s" % (r[2]), "email": "%s" % (r[3]), "tel": "%s"%(r[5])}
             return jsonify(r1), 200
 
         except Exception as e:
@@ -469,7 +469,7 @@ def iizposoje():
             r = r.replace(" ", "")
             r = r.replace("'", "")
             r = r.split(",")
-            r1 = {"id": int(r[0]), "stanje": "%s" % (r[1]), "opis": "%s" % (r[2])}
+            r1 = {"id": int(r[0]), "nadzornik": "%s" % (r[1]), "oprema": "%s" % (r[2]), "placnik": "%s" % (r[3]), "stanje": "%s" % (r[4]), "datum_od": "%s" % (str(r[5])), "datum_do": "%s"%(str(r[6])), "opis": "%s"%(r[7])}
             return jsonify(r1), 200
 
         except Exception as e:
@@ -525,7 +525,7 @@ def vizposoje():
             #r = r.replace("'", "")
             #r = r.split(",")
             for i in range(0, len(r)):
-                r1 = {"id": int(r[i][0]), "nadzornik": "%s" % (r[i][1]), "oprema": "%s" % (r[i][2]), "placnik": "%s" % (r[i][3]), "datum_od": "%s" % (str(r[i][4])), "datum_do": "%s"%(str(r[i][5])), "opis": "%s"%(r[i][6])}
+                r1 = {"id": int(r[i][0]), "nadzornik": "%s" % (r[i][1]), "oprema": "%s" % (r[i][2]), "placnik": "%s" % (r[i][3]), "stanje": "%s" % (r[i][4]), "datum_od": "%s" % (str(r[i][5])), "datum_do": "%s"%(str(r[i][6])), "opis": "%s"%(r[i][7])}
                 data.append(r1)
             return jsonify(data), 200
 
