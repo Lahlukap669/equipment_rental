@@ -463,13 +463,15 @@ def iizposoje():
         ##interaction db
         try:
             ##Called function
-            r = db.session.execute("""SELECT * FROM izposoje WHERE id=%d LIMIT 1;""" % (id)).first()
+            r = db.session.execute("""SELECT id, user_id, oprema_id, placnik_id, stanje_id, TO_CHAR(datum_od,'YYYY-MM-DD HH24:MI:SS') as datum_od, TO_CHAR(datum_do,'YYYY-MM-DD HH24:MI:SS') as datum_do, opis FROM izposoje WHERE id=%d LIMIT 1;""" % (id)).first()
             db.session.commit()
+            print(r)
             r = str(r)[1:-1]
             r = r.replace(" ", "")
             r = r.replace("'", "")
             r = r.split(",")
-            r1 = {"id": int(r[0]), "nadzornik": "%s" % (r[1]), "oprema": "%s" % (r[2]), "placnik": "%s" % (r[3]), "stanje": "%s" % (r[4]), "datum_od": "%s" % (str(r[5])), "datum_do": "%s"%(str(r[6])), "opis": "%s"%(r[7])}
+            
+            r1 = {"id": int(r[0]), "nadzornik": int(r[1]), "oprema": int(r[2]), "placnik": int(r[3]), "stanje": int(r[4]), "datum_od": "%s" % (str(r[5][0:10] + " " + r[5][10:19])), "datum_do": "%s"%(str(r[6][0:10] + " " + r[6][10:19])), "opis": "%s"%(r[7])}
             return jsonify(r1), 200
 
         except Exception as e:
