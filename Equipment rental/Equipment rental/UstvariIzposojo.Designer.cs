@@ -139,9 +139,9 @@
             this.metroLabel6.AutoSize = true;
             this.metroLabel6.Location = new System.Drawing.Point(23, 316);
             this.metroLabel6.Name = "metroLabel6";
-            this.metroLabel6.Size = new System.Drawing.Size(36, 19);
+            this.metroLabel6.Size = new System.Drawing.Size(57, 19);
             this.metroLabel6.TabIndex = 10;
-            this.metroLabel6.Text = "Opis";
+            this.metroLabel6.Text = "Poročilo";
             // 
             // metroTextBox1
             // 

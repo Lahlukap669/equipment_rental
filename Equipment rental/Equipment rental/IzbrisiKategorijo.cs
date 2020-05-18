@@ -80,7 +80,6 @@ namespace Equipment_rental
 
                 dynamic process = Newtonsoft.Json.JsonConvert.DeserializeObject(responseString);
 
-                MessageBox.Show(process.ToString());
                 DisplayCategories();
             }
             catch (Exception ex)

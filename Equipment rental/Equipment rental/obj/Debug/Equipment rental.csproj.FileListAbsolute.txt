@@ -46,7 +46,6 @@ D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipm
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.MainForm.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Oprema.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PosodobiOpremo.resources
-D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PrikaziKategorijo.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Properties.Resources.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Register.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Stanja.resources
@@ -63,3 +62,7 @@ D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipm
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Izposoje.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariIzposojo.resources
 D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VseIzposoje.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.UstvariPlacnika.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.Placniki.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.VsiPlacniki.resources
+D:\git repos\equipment_rental\Equipment rental\Equipment rental\obj\Debug\Equipment_rental.PosodobiIzposojo.resources

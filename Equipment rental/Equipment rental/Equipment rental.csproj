@@ -43,6 +43,10 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
@@ -113,17 +117,23 @@
     <Compile Include="Oprema.Designer.cs">
       <DependentUpon>Oprema.cs</DependentUpon>
     </Compile>
+    <Compile Include="Placniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Placniki.Designer.cs">
+      <DependentUpon>Placniki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PosodobiIzposojo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PosodobiIzposojo.Designer.cs">
+      <DependentUpon>PosodobiIzposojo.cs</DependentUpon>
+    </Compile>
     <Compile Include="PosodobiOpremo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PosodobiOpremo.Designer.cs">
       <DependentUpon>PosodobiOpremo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="PrikaziKategorijo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="PrikaziKategorijo.Designer.cs">
-      <DependentUpon>PrikaziKategorijo.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,6 +160,12 @@
     </Compile>
     <Compile Include="UstvariOpremo.Designer.cs">
       <DependentUpon>UstvariOpremo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UstvariPlacnika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UstvariPlacnika.Designer.cs">
+      <DependentUpon>UstvariPlacnika.cs</DependentUpon>
     </Compile>
     <Compile Include="UstvariStanje.cs">
       <SubType>Form</SubType>
@@ -181,6 +197,12 @@
     <Compile Include="VseKategorije.Designer.cs">
       <DependentUpon>VseKategorije.cs</DependentUpon>
     </Compile>
+    <Compile Include="VsiPlacniki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VsiPlacniki.Designer.cs">
+      <DependentUpon>VsiPlacniki.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DodajKategorijo.resx">
       <DependentUpon>DodajKategorijo.cs</DependentUpon>
     </EmbeddedResource>
@@ -208,11 +230,14 @@
     <EmbeddedResource Include="Oprema.resx">
       <DependentUpon>Oprema.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Placniki.resx">
+      <DependentUpon>Placniki.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PosodobiIzposojo.resx">
+      <DependentUpon>PosodobiIzposojo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PosodobiOpremo.resx">
       <DependentUpon>PosodobiOpremo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PrikaziKategorijo.resx">
-      <DependentUpon>PrikaziKategorijo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -235,6 +260,9 @@
     <EmbeddedResource Include="UstvariOpremo.resx">
       <DependentUpon>UstvariOpremo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UstvariPlacnika.resx">
+      <DependentUpon>UstvariPlacnika.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UstvariStanje.resx">
       <DependentUpon>UstvariStanje.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="VseKategorije.resx">
       <DependentUpon>VseKategorije.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VsiPlacniki.resx">
+      <DependentUpon>VsiPlacniki.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

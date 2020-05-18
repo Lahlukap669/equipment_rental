@@ -1,6 +1,6 @@
 ﻿namespace Equipment_rental
 {
-    partial class Izposoje
+    partial class Placniki
     {
         /// <summary>
         /// Required designer variable.
@@ -34,38 +34,40 @@
             // 
             // metroButton2
             // 
-            this.metroButton2.Location = new System.Drawing.Point(32, 92);
+            this.metroButton2.Location = new System.Drawing.Point(23, 92);
             this.metroButton2.Name = "metroButton2";
             this.metroButton2.Size = new System.Drawing.Size(160, 23);
-            this.metroButton2.TabIndex = 4;
+            this.metroButton2.TabIndex = 7;
             this.metroButton2.Text = "Ustvari";
             this.metroButton2.Click += new System.EventHandler(this.MetroButton2_Click);
             // 
             // metroButton1
             // 
-            this.metroButton1.Location = new System.Drawing.Point(32, 63);
+            this.metroButton1.Location = new System.Drawing.Point(23, 63);
             this.metroButton1.Name = "metroButton1";
             this.metroButton1.Size = new System.Drawing.Size(160, 23);
-            this.metroButton1.TabIndex = 3;
-            this.metroButton1.Text = "Vse izposoje";
+            this.metroButton1.TabIndex = 6;
+            this.metroButton1.Text = "Vsi placniki";
             this.metroButton1.Click += new System.EventHandler(this.MetroButton1_Click);
             // 
-            // Izposoje
+            // Placniki
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(225, 129);
+            this.ClientSize = new System.Drawing.Size(203, 129);
             this.Controls.Add(this.metroButton2);
             this.Controls.Add(this.metroButton1);
             this.MaximizeBox = false;
-            this.Name = "Izposoje";
+            this.Name = "Placniki";
             this.Resizable = false;
-            this.Text = "Izposoje";
+            this.Text = "Placniki";
+            this.Load += new System.EventHandler(this.Placniki_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
         private MetroFramework.Controls.MetroButton metroButton2;
         private MetroFramework.Controls.MetroButton metroButton1;
     }

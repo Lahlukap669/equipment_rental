@@ -95,8 +95,6 @@ namespace Equipment_rental
 
                 string test = "{ \"kategorija_id\": " + savedKategorije[kategorija] + ", \"stanje_id\": " + savedStanje[stanje] + ", \"ime\": \"" + metroTextBox1.Text + "\", \"opis\": \"" + metroTextBox2.Text + "\"}";
 
-                MessageBox.Show(test);
-
                 StringContent queryString = new StringContent(test, Encoding.UTF8, "application/json");
 
                 var response = await client.PostAsync("https://equipment-rental.herokuapp.com/coprema", queryString);

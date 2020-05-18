@@ -52,8 +52,8 @@ namespace Equipment_rental
                 if (process["bool"].ToString() != "0")
                 {
                     MessageBox.Show("Login successful.");
-                    MainForm mainForm = new MainForm("lolz");
                     uId = Convert.ToInt32(process["bool"]);
+                    MainForm mainForm = new MainForm("lolz");
                     mainForm.Show();
                     this.Hide();
                 }

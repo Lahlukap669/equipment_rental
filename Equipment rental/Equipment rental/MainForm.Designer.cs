@@ -40,6 +40,13 @@
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.metroButton6 = new MetroFramework.Controls.MetroButton();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nadzornik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Opis = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Oprema = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Placnik = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatumOd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DatumDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.metroPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -123,14 +130,14 @@
             // 
             // metroPanel1
             // 
-            this.metroPanel1.Controls.Add(this.metroButton6);
             this.metroPanel1.Controls.Add(this.dataGridView1);
+            this.metroPanel1.Controls.Add(this.metroButton6);
             this.metroPanel1.HorizontalScrollbarBarColor = true;
             this.metroPanel1.HorizontalScrollbarHighlightOnWheel = false;
             this.metroPanel1.HorizontalScrollbarSize = 10;
-            this.metroPanel1.Location = new System.Drawing.Point(209, 62);
+            this.metroPanel1.Location = new System.Drawing.Point(219, 63);
             this.metroPanel1.Name = "metroPanel1";
-            this.metroPanel1.Size = new System.Drawing.Size(580, 491);
+            this.metroPanel1.Size = new System.Drawing.Size(743, 491);
             this.metroPanel1.TabIndex = 13;
             this.metroPanel1.VerticalScrollbarBarColor = true;
             this.metroPanel1.VerticalScrollbarHighlightOnWheel = false;
@@ -138,25 +145,70 @@
             // 
             // metroButton6
             // 
-            this.metroButton6.Location = new System.Drawing.Point(449, 465);
+            this.metroButton6.Location = new System.Drawing.Point(612, 465);
             this.metroButton6.Name = "metroButton6";
             this.metroButton6.Size = new System.Drawing.Size(128, 23);
             this.metroButton6.TabIndex = 15;
             this.metroButton6.Text = "Izvozi v excel";
+            this.metroButton6.Click += new System.EventHandler(this.MetroButton6_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 3);
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nadzornik,
+            this.Opis,
+            this.Oprema,
+            this.Placnik,
+            this.DatumOd,
+            this.DatumDo});
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 0);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(574, 456);
-            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(742, 422);
+            this.dataGridView1.TabIndex = 16;
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "ID";
+            this.Id.Name = "Id";
+            // 
+            // Nadzornik
+            // 
+            this.Nadzornik.HeaderText = "Nadzornik";
+            this.Nadzornik.Name = "Nadzornik";
+            // 
+            // Opis
+            // 
+            this.Opis.HeaderText = "Opis";
+            this.Opis.Name = "Opis";
+            // 
+            // Oprema
+            // 
+            this.Oprema.HeaderText = "Oprema";
+            this.Oprema.Name = "Oprema";
+            // 
+            // Placnik
+            // 
+            this.Placnik.HeaderText = "Placnik";
+            this.Placnik.Name = "Placnik";
+            // 
+            // DatumOd
+            // 
+            this.DatumOd.HeaderText = "Datum Od";
+            this.DatumOd.Name = "DatumOd";
+            // 
+            // DatumDo
+            // 
+            this.DatumDo.HeaderText = "Datum Do";
+            this.DatumDo.Name = "DatumDo";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 576);
+            this.ClientSize = new System.Drawing.Size(985, 576);
             this.Controls.Add(this.metroPanel1);
             this.Controls.Add(this.metroButton5);
             this.Controls.Add(this.metroTile4);
@@ -171,7 +223,9 @@
             this.Name = "MainForm";
             this.Resizable = false;
             this.Text = "Home Page";
+            this.Activated += new System.EventHandler(this.MainForm_Activated);
             this.Load += new System.EventHandler(this.MainForm_Load);
+            this.Enter += new System.EventHandler(this.MainForm_Enter);
             this.metroPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -192,5 +246,12 @@
         private MetroFramework.Controls.MetroPanel metroPanel1;
         private MetroFramework.Controls.MetroButton metroButton6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nadzornik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Opis;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Oprema;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Placnik;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DatumOd;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DatumDo;
     }
 }
