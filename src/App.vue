@@ -40,3 +40,7 @@ export default {
   }
 }
 </script>
+
+<style>
+/*@import "./assets/random.css";*/
+</style>
