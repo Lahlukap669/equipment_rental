@@ -1,13 +1,15 @@
 <template>
-<div style="padding: 30px">
-    <button class="button btn-danger" @click="logout()" >Logout</button>
-    <div v-for="item in items" class="card" style="width: 18rem; float: left">
+<div style="padding: 30px; width: 60%; margin-left: 20%;">
+    <div v-for="item in items" class="card" style="width: 28%; height: 22rem; float: left; margin:2%; background-color: #dddddd;">
         <div class="card-body">
-            <h5 class="card-title">{{ item.opis }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+            <h5 class="card-title">{{ item.id }}</h5>
+            <h6 class="card-subtitle mb-2">Stanje: {{ item.stanje }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Oprema: {{ item.stanje }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Nadzornik: {{ item.nadzornik }}</h6>
+            <h6 class="card-subtitle mb-2 text-muted">Plačnik: {{ item.placnik }}</h6>
+            <h7 class="card-subtitle mb-2 text-muted"><i>Datum-od: {{ item.datum_od }}</i></h7></br>
+            <h7 class="card-subtitle mb-2 text-muted"><i>Datum-do: {{ item.datum_do }}</i></h7></br></br>
+            <p class="card-text">Poročilo: {{ item.opis }}</p>
         </div>
     </div>
 </div>
@@ -30,11 +32,8 @@ export default {
                 console.log(result);
                 this.items = result;
             })
-        },
-        logout() {
-            localStorage.removeItem('id');
-            this.$router.push('/login');
         }
+        
     }
 }
 </script>
